@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gra tenis</title>
+    <link rel="stylesheet"  href="styletenis.css">
+</head>
+
+<body>
+   
+    <div id="wrapper">
+        <a href="http://www.maciejwojtas.cba.pl">strona główna</a>
+    <div id="menu"><button id="start">START</button><button href="www.maciejwojtas.cba.pl" id="powrót">POWRÓT</button></div>
+    <div id="game">
+    
+    <canvas></canvas>
+    </div>
+    </div>
+    <script>
+        const start = document.querySelector(`button`);
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 1000;
+        canvas.height = 500;
+        
+        const cw = canvas.width;
+        
+        const ch = canvas.height;
+        
+        const ballsize = 20;
+        
+        let ballX=cw/2-ballsize/2;
+        let ballY=ch/2-ballsize/2;
+        
+        const paddleHeight = 100;
+        const paddleWidth = 20;
+        
+        const playerX = 70;
+        const aiX = 930;
+        
+        let playerY = 200;
+        let aiY = 200;
+        
+        const lineHeight=15;
+        const lineWidth=6;
+        
+        let ballSpeedX = 0;
+        let ballSpeedY = 0;
+        const maxBallSpeed = 10;
+        
+        const goalHeigh = 200;
+        
+        
+            let playerScore = 0;
+            let aiScore = 0;
+        
+    
+            
+        const playerScoreb = document.createElement(`button`);
+            playerScoreb.textContent = `GRACZ: `+playerScore;
+            document.getElementById(`menu`).appendChild(playerScoreb);
+        const aiScoreb = document.createElement(`button`);
+            aiScoreb.textContent = `KOMPUTER: `+aiScore;
+            document.getElementById(`menu`).appendChild(aiScoreb);
+            
+            function score(){
+            aiScoreb.textContent = `KOMPUTER: `+aiScore;
+            playerScoreb.textContent = `GRACZ: `+playerScore;
+            
+        }
+            
+            
+            
+        function player(){
+            
+            ctx.fillStyle=`green`;
+            ctx.fillRect(playerX,playerY, paddleWidth,paddleHeight); 
+            
+            
+        }
+        function ai (){
+             ctx.fillStyle=`yellow`;
+            ctx.fillRect(aiX-paddleWidth,aiY, paddleWidth,paddleHeight); 
+            
+        }
+
+        
+        function table(){
+            
+            ctx.fillStyle=`black`;
+            ctx.fillRect(0,0, cw,ch); 
+            let linePosiotion=20;
+            
+            for( let linePosition = 30; linePosition<ch; linePosition += 30   ) {
+            ctx.fillStyle=`white`;
+            ctx.fillRect(cw/2-lineWidth/2,linePosition, lineWidth, lineHeight);
+                }
+            
+            
+           for( let i = 120; i<400; i+=230){
+                ctx.fillStyle=`red`;
+               for(let j = 0; j<+2000; j+=cw-10)
+                ctx.fillRect(j,i,10,30);
+           }
+            
+            
+            
+        }
+        
+        
+        
+        function ball(){
+            
+        ctx.fillStyle=`white`;
+        ctx.fillRect(ballX,ballY,ballsize,ballsize);
+            ballX += ballSpeedX;
+            ballY += ballSpeedY;
+      goal();
+        
+            
+            
+            
+            
+            
+            if(ballY+ballsize>=ch||ballY<=0){
+                ballSpeedY=-ballSpeedY;
+                accelerate();
+                
+
+            }
+            
+            if(ballX+ballsize>=cw||ballX<=0){
+                ballSpeedX=-ballSpeedX;
+                               accelerate();
+
+                
+            }
+               if(ballX<=playerX+paddleWidth&&ballX+ballsize>=playerX&&ballY>=playerY&&ballY<=playerY+paddleHeight){
+                ballSpeedX=-ballSpeedX;
+                accelerate();
+
+            }
+           
+            if(ballX+ballsize>=aiX-paddleWidth&&ballX<=aiX&&ballY>=aiY&&ballY<=aiY+paddleHeight){
+                ballSpeedX=-ballSpeedX;
+                accelerate();
+
+            }
+          
+
+            }
+        
+            
+        function accelerate(){
+            if(ballSpeedY>0&&ballSpeedY<=maxBallSpeed){
+                 ballSpeedY += 0.1;
+                }else if(ballSpeedY<0&&ballSpeedY>=-maxBallSpeed)
+                   ballSpeedY += -0.1 
+                
+            if(ballSpeedX>0&&ballSpeedX<=maxBallSpeed+5){
+                 ballSpeedX += 0.1;
+                }else if(ballSpeedX<0&&ballSpeedX>=-maxBallSpeed)
+                   ballSpeedX += -0.1; 
+        
+            console.log(ballX+`y`+ballY+`sx:`+ballSpeedX+`sy`+ballSpeedY)
+            
+        }
+    
+        
+    
+         
+        
+        topCanvas=canvas.offsetTop;
+        console.log(topCanvas);
+        
+        function playerPosition(e){
+            //console.log(`pozycja myszy to `+(e.clientY - topCanvas))
+             
+            playerY=e.clientY-topCanvas;
+           if(e.clientY-topCanvas<=0){
+               playerY=0;
+           }
+             if(e.clientY-topCanvas>=ch-paddleHeight){
+               playerY=ch-paddleHeight;
+           }
+        }
+        
+             function aiPosition(e){
+            //console.log(`pozycja myszy to `+(e.clientY - topCanvas))
+           
+     
+                 if(ballX>cw/2){
+                     if(aiY+paddleHeight/2-ballY>100){
+                         aiY-=20;
+                         
+                     }
+                     else if(aiY+paddleHeight/2-ballY>50)
+                         aiY-=5;
+                 
+                  if(aiY+paddleHeight/2-ballY<-100){
+                         aiY+=20;
+                         
+                     }
+                     else if(aiY+paddleHeight/2-ballY<-50)
+                         aiY+=5;
+                                  
+                 
+                 
+                 
+                 
+                                 if(aiY<=0){
+              aiY=0;
+          }
+             if(aiY>=ch-paddleHeight){
+               aiY=ch-paddleHeight;
+           }
+                    
+                 
+                 
+                 
+                 
+       
+                 
+                 
+             }
+             }
+        
+        
+        function gameStart(){
+            ballX=cw/2-ballsize/2;
+            ballY=ch/2-ballsize/2;
+            ballSpeedX=1.5;
+            ballSpeedY=1;
+            
+            
+        }
+        addEventListener(`mousemove`, playerPosition);
+        start.addEventListener(`click`, gameStart);
+         
+        function goal(){
+          
+            
+          if(ballY>150&&ballY<350){ 
+           if(ballX<=0||ballX>=cw-ballsize){
+           
+               if(ballX<=0) {aiScore+=1;}
+               if(ballX>=cw-ballsize) {playerScore+=1;}
+                ballX=cw/2-ballsize/2;
+            ballY=ch/2-ballsize/2;
+               ballSpeedX=0;
+               ballSpeedY=0;
+              
+        }
+        }
+        }
+        
+        function game()
+        {
+        table();
+        ball();
+        player();
+        aiPosition();
+        ai();
+        score()
+        }
+        
+        setInterval(game,1000/60)
+        
+    </script>
+</body>
+</html>

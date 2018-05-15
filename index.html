@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Kalam&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel:400,900|Poiret+One&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.5/css/swiper.min.css">
+     <link rel="shortcut icon" href="fav/java.ico" type="image/x-icon">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117682748-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117682748-1');
+</script>
+
+    <title>Maciej Wojtas</title>
+</head>
+
+<body>
+    <nav>
+        <a  class="button  active" id="about"><i class="fa fa-user"></i><p>&nbsp;O MNIE</p></a>
+        <a  class="button" id="skills"><i class="fa fa-wrench"></i><p>&nbsp;UMIEJĘTNOŚCI</p></a>
+        <a  class="button" id="projects"><i class="fa fa-file"></i><p>&nbsp;PROJEKTY</p></a>
+        <a  class="button" id="comments"><i class="fa fa-comments"></i><p>&nbsp;KOMENTARZE</p></a>
+        <a class="button" id="contact"><i class="fa fa-envelope"></i><p>&nbsp;KONTAKT</p></a>
+
+
+
+</nav>
+ <header>
+     <div><h3>MACIEJ WOJTAS</h3><h1>Front-end Developer</h1></div>
+    </header>
+    <article class="section about">
+       <div class="box">
+           
+           
+           <p><img src="img/portret2.jpg">Jestem ambitnym, młodym człowiekiem zajawionym web developerstwem. Swoje projekty tworzę z wielkim zaangażowaniem i dociekliwością. Uczę się bardzo szybko i nie boję się eksperymentować. Jestem otwarty na krytykę oraz kieruję się przekonaniem że człowiek może nauczyć się wszystkiego co przez człowieka zostało wymyślone. Bardzo chciałbym znaleźć zespół ludzi, którzy myślą podobnie jak ja. Niestety dotychczas byłem zmuszony pracować sam. Jeśli zainteresowały Cie moje projekty i widzisz mnie w swoim zespole, śmiało napisz do mnie a na pewno się dogadamy ! </p></div>
+        
+        
+        </article>
+    <article class="section skills">
+        
+        <div class="box">
+            <p>Bazuję głównie na trzech językach:<br>
+        -JavaScript<br>
+        -HTML5<br>
+        -CSS<br>
+
+        </p><img src="img/html5-css3-js.png">
+        
+        
+        
+        </div>
+    </article>
+    <article class="section projects">
+        <div class="box">
+     <div class="swiper-container">
+    <div class="swiper-wrapper">
+        
+        <div class="swiper-slide"><img src="img/projects/psd.bmp">
+            <div style="display: flex; justify-content: space-between"><a class="label" >PSD do HTML</a>
+        <a href="/psd/psd.html" class="button" >Przejdź do</a>
+            </div>
+        </div>
+        <div class="swiper-slide"><img src="img/projects/tenis.bmp">
+            <div style="display: flex; justify-content: space-between"><a  class="label" >Gra tenis</a>
+        <a href="/tenis/tenis.html" class="button" >Przejdź do</a>
+            </div>
+        </div>
+        ...
+    </div>
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+</div>
+        
+        
+        </div>
+        
+        
+        
+        
+        </article>
+    <article class="section comments">
+        <div class="box">
+     <div id="commentBox">
+
+    <label class="label">Podpis:</label>
+
+    <input type="text" name="name" required>
+
+
+
+    <label class="label">komentarz:</label>
+
+         <textarea cols="50" rows="4"  name="comment" maxlength="300" required></textarea>
+
+    <button class="add-comment label" style="color:black">dodaj komentarz</button>
+
+        <div id="commentPrep"></div>
+
+        <form id="form1" action="commentss.php" method="post">
+
+        <input type="text" id="jp" name="textPHP"/>
+
+        <input type="submit" value="dodaj"/>
+
+        </form>
+
+        <div id="commentsToLoad"></div>
+
+        </div>
+        </div>
+
+
+    
+    
+    
+    </article>
+    <article class="section contact">
+                <div class="box">
+
+         <div id="contact">
+
+                                   
+
+
+
+
+ <form method="post" name="contact" action="contactengine.php">
+
+				<label class="label" for="Name">Podpis:</label>
+
+				<input type="text" name="Name" id="Name" required/>
+
+				
+
+				<label class="label" for="Email">Email:</label>
+
+				<input type="Email" name="Email" id="Email" required />
+
+				
+
+				<label class="label" for="Message">Wiadomość:</label><br />
+
+				<textarea name="Message" rows="5" cols="35" id="Message" required></textarea>
+
+
+
+				<input type="submit" name="submit" value="Wyślij" class="submit-button button" />
+
+                  
+
+
+
+			</form>
+             <div class="label" style="line-height: 2rem; padding-top: 3vh; font-size: 1rem;"> tel: &nbsp;535153407<br>
+             email:&nbsp; maciej.andrzej.wojtas@gmail.com
+             </div>
+
+              
+
+    </div>
+     </div>
+
+
+    
+    
+    
+    
+    
+    </article>
+    <footer>
+<h>Copyright © 2018 Maciej Wojtas </h>
+<div>
+<a href="https://www.addtoany.com/share?linkurl=http%3A%2F%2F127.0.0.1%3A52103%2Findex.html&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/a2a.svg" width="24" height="24" style="background-color:#676767"></a>
+<a href="https://www.addtoany.com/add_to/facebook?linkurl=http%3A%2F%2F127.0.0.1%3A52103%2Findex.html&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/facebook.svg" width="24" height="24" style="background-color:#676767"></a>
+<a href="https://www.linkedin.com/in/maciej-wojtas-30b399162/"><img src="https://static.addtoany.com/buttons/linkedin.svg" width="24" height="24" style="background-color:#676767"></a>
+<a href="https://www.addtoany.com/add_to/google_plus?linkurl=http%3A%2F%2F127.0.0.1%3A52103%2Findex.html&amp;linkname=" target="_blank"><img src="https://static.addtoany.com/buttons/google_plus.svg" width="24" height="24" style="background-color:#676767"></a>
+<a href="https://github.com/maciejwojtas" target="_blank"><img src="https://static.addtoany.com/buttons/github.svg" width="24" height="24" style="background-color:#676767"></a>
+</div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="index.js"></script>
+    
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+     <script src="reveal.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.5/js/swiper.min.js"></script>
+    <script src="slider.js"></script>
+        <script src="comments.js"></script>
+
+
+
+
+
+   
+    </body>
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="">

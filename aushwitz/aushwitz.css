@@ -1,0 +1,137 @@
+*{
+    margin: 0; padding: 0;
+font-family: 'Playfair Display', serif;
+box-sizing:border-box;
+}
+
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    padding 10 10 10 10;
+    background-color: #CCCC99;
+    border: 5px solid #CCCC99;
+}
+
+body { background-color: white;
+}
+header img 
+{
+    max-width: 100%;
+    border-radius: 3% 3%;
+}
+p img
+{
+    float: left;
+    display: inline-block;
+    max-width: 50%;
+    box-sizing: border-box;
+    padding: 5px 5px 5px 5px;
+    max-height: 300px;
+ border-radius: 30%;
+}
+
+nav
+{
+    overflow: hidden;
+    background-color: white;
+    max-height: 100%;
+}
+
+a.menu
+{
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 1s ease;
+}
+
+a.active
+{
+        background-color: black;
+    color: white;
+
+}
+a.menu:hover
+{
+    background-color: black;
+     color: white;
+    cursor: pointer;
+
+}
+h1
+{
+    display: block;
+    text-align: center;
+    padding: 30px 50px 30px 50px;
+    font-size: 30px;
+    box-sizing: border-box;
+    border-bottom: 5px solid black;
+    margin: 0 50px 50px 50px;
+    
+    }
+article
+{
+    padding: 0 20px 0 20px;
+}
+p
+{
+    display: inline-block;
+    padding: 0 0 auto 0;
+    text-align: justify;
+    max-height: 400px;
+    line-height: 25px;
+}
+.text
+{
+        box-sizing: border-box;
+    display: block;
+    max-width: 500;
+    max-height: 100%;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+}
+iframe
+{
+    background-color: white;
+    margin: 30px auto;
+    display: block;
+}
+.yt
+{
+    display: block;
+    text-align: center;
+    padding-bottom: 50px;
+    
+}
+footer
+{
+    background-color: bisque;
+    text-align: center;
+    border-radius: 20% 20% ;
+    margin-bottom: 20px;
+}
+@media (max-width:800px)
+{
+    a.menu
+    {
+      width: 50%;
+    }
+    iframe
+    {
+        height: 300px;
+    }
+    p
+    {
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .text
+    {
+        line-height: 35px;
+    }
+}

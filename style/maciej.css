@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    padding: 0;
+      box-sizing: border-box;
+            font-family: 'Kalam', cursive;
+
+    
+}
+    html { font-size: 62.5%; } 
+
+header{
+    background: url(/img/bg.jpg) center 70%;
+   height: 90vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+header a:hover{
+     transform: translateX(-10px);
+    color: orangered;
+    cursor: pointer;
+}
+.enter{
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+     font-size: 4rem;
+    position: absolute;
+    left: 3vw;
+    top: 3%;
+
+    
+}
+nav:hover{
+cursor: pointer;
+}
+a{
+    text-decoration: none;
+    display: block;
+    line-height: 5vh;
+font-size: 2rem;
+    justify-content: center;
+        font-family: 'Kalam', cursive;
+    transition: 0.5s;
+
+    
+}
+nav a:hover{
+    transform: translateX(-10px);
+    color: orangered;
+    cursor: pointer;
+}
+article{
+    overflow: hidden;
+    height: 105vh;
+    width: 100vw;
+    margin-top: 85vh;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-content: flex-start;
+    background-image: url(/img/bg2.jpg) ;
+    background-size: cover;
+    }
+#article{
+    padding-top: 45px ;
+    
+}
+i:hover{
+    cursor: pointer;
+}
+p{
+    position: absolute;
+    top: 30vh;
+    left: 50vw;
+    font-size: 3rem;
+    font-family: 'Kalam', cursive;
+    color: black;
+    line-height: 4rem;
+    padding: 40px 40px 20px 0;
+    max-height: 
+
+}
+.slider{
+    margin-top: 10vh;
+    z-index: 100;
+    position: absolute;
+    top: 30vh;
+    left: 20vw;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+.slides{
+    display: block;
+    
+}
+.slide{
+    float: left;
+   height: 60vh;
+    transition: 3s;
+    list-style-type: none;
+
+        
+}
+.slide img{
+    height: auto;
+    width: 60vw;
+}
+.slide2{
+    float: left;
+   height: 60vh;
+    width: 60vw;
+    transition: 3s;
+        list-style-type: none;
+
+
+        
+}
+.slide3{
+    float: left;
+   height: 60vh;
+    width: 60vw;
+    transition: 3s;
+        list-style-type: none;
+
+
+        
+}
+.slide4{
+    float: left;
+   height: 60vh;
+    width: 60vw;
+    transition: 3s;
+        list-style-type: none;
+
+    
+
+        
+}
+
+.slide img{
+    display: block;
+    height: auto;
+  
+    
+}
+
+
+.left{
+    display: inline-block;
+    position: absolute;
+    z-index: 1000;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    transform: translateY(-50%);
+
+        left: 1vw;
+
+}
+.right{
+    display: inline-block;
+    position: absolute;
+    z-index: 1000;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    transform: translateY(-50%);
+
+        right: 1vw;
+
+}
+.right:hover{
+    font-size: 3.5rem;
+    color: orangered;
+}
+.left:hover{
+    font-size: 3.5rem;
+    color: orangered;
+}
+
+.bg{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    
+}
+.portrait {
+    display: block;
+    position:absolute;
+    top: 40px;
+    right: 10%;
+    height: 30vw;
+    padding: 5px;
+    max-height: 30vh;
+      
+}
+
+   
+hgroup{
+    position: relative;
+    top: 25vh;
+    text-align: center;
+    z-index: 2;
+}
+header h1{
+    font-size: 4rem;
+    line-height: 6rem;
+            font-family: 'Permanent Marker', cursive;
+
+    
+}
+header h2{
+        font-size: 2rem;
+        font-family: 'Permanent Marker', cursive;
+}
+.arrow{
+    margin: 5px 0 0 0;
+    color: black;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    border: 2px solid black;
+    border-radius: 100%;
+    font-size: 3rem;
+    text-align: center;
+    transition: 0.5s;
+    animation: arrow 1s infinite linear;
+
+}
+
+.arrow:hover{
+    cursor: pointer;
+    color: orangered;
+}
+.xd{
+       font-size: 0px;
+
+}
+
+.reverse{
+        animation: arrowReverse 1s infinite linear;
+
+    
+}
+#description{
+    width: 100vw;
+    position: absolute;
+    bottom: 10vh;
+    font-size: 1.6rem;
+    background-color: azure;
+    text-align: center;
+    line-height: 3rem;
+    
+}
+#description a{
+    color: black;
+}
+form{
+                font-family: 'Permanent Marker', cursive;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
+#contact{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    background: url(/img/paintsplatter.png) center no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    transform: translateY(-50%) translateX(-50%);
+    padding-bottom: 10vh;
+}
+.submit-button{
+    background: none;
+        color: white;
+                    font-family: 'Permanent Marker', cursive;
+
+    font-size: 2rem;
+border: none;
+}
+.submit-button:hover{
+transform: translateX(-10px);
+    color: yellow;
+    cursor: pointer;
+}
+form div{
+    padding-left: 50px;
+}
+#commentBox{
+    margin: 0 auto;
+        transform: translateY(15vh);
+    padding-top: vh;
+    width: 30vw;
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    margin-bottom: 15vh;
+    
+}
+.add-comment{
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+
+
+.add-comment:hover{
+    color: orangered;
+    cursor: pointer;
+    transform: translateX(10px);
+
+    
+}
+#comments{
+    padding-top: 5vh;
+}
+#comments div{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    text-align: left;
+
+}
+#comments h{
+    display: block;
+    margin: 2vw;
+    border: 5px solid lightyellow;
+border-radius: 20%;
+    font-size: 1.5rem;
+    background-color: lightyellow;
+    text-align: left;
+    
+
+}
+footer{
+      position: sticky;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    
+}
+footer a{
+    margin: 5px 5px 0 5px;;
+}
+footer div{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vw;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1280px){
+    p{
+        font-size: 2.5rem;
+        line-height: 3rem;
+        left: 30%;
+    }
+ 
+  
+    
+    
+}
+@media (max-width: 1024px){
+    p{
+        left: 20%;
+    }
+      .bg{
+    } 
+     #commentBox{
+    width: 50vw;
+    
+ 
+    
+    }
+
+    
+}
+@media (max-width: 768px){
+    p{
+font-size: 2rem;  
+    }
+    article{
+        background-position: top;
+    }
+       
+    
+}
+@media (max-width: 576px){
+    p{
+        font-size: 1.5rem;
+    }
+    .bg{
+    } 
+    #commentBox{
+    width: 70vw;
+    
+ 
+    
+    }
+}
+@media (max-width: 360px){
+    p{
+        font-size: 1.2rem;
+    }
+      #commentBox{
+    width: 90vw;
+    
+ 
+    
+    }
+ 
+    
+    
+}
+@media (max-height: 576px){
+    .enter{
+    flex-direction: row;    
+    }   
+    a {
+
+display: inline-block;
+padding: 0 1vw;
+    }
+    a:hover{
+        transform: translateY(-10%);
+    }
+    hgroup{
+        top: 30vh;
+    }
+    article{
+        height: 150vh;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes arrow {
+    0%{
+        transform:  translateY(-10%)
+          translateX(-50%) rotate(180deg);
+
+    }
+    
+    50%{
+                transform:  translateY(0%)
+                       translateX(-50%) rotate(180deg);
+
+
+        
+    }
+    
+    100%{
+                transform:  translateY(10%)
+         translateX(-50%) rotate(180deg);
+
+
+        
+    }
+    
+    
+    
+}
+@keyframes arrowReverse {
+    0%{
+        transform:  translateY(-10%)
+          translateX(-50%);
+
+    }
+    
+    50%{
+                transform:  translateY(0%)
+                       translateX(-50%);
+
+
+        
+    }
+    
+    100%{
+                transform:  translateY(10%)
+         translateX(-50%);
+
+
+        
+    }
+    
+    
+    
+}
+
+
+    

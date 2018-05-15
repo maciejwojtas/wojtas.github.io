@@ -1,0 +1,117 @@
+*{
+    margin: 0; padding: 0;
+font-family: 'Playfair Display', serif;
+box-sizing:border-box;
+}
+
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    padding 10 10 10 10;
+    background-color: #CCCC99;
+    border: 5px solid #CCCC99;
+}
+a{
+    font-family: 'Lobster', cursive;
+text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    color: azure;
+    display: block;
+    text-decoration: none;
+    
+}
+a:hover{
+        font-size: 20px;
+    color: beige;
+
+}
+div.enter{
+    overflow: hidden;
+    background-color: azure;
+    background: url(menu.jpg) center;
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    top: 20%;
+    left: 46%;
+    width: 100px;
+    height: 50px;
+    border: 5px solid crimson;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: azure;
+    transition: 2s;
+    padding-top: 20px;
+}
+div.enter:hover{
+        background-color: orangered;
+    background-image: none;
+    border: 10px solid crimson;
+    cursor: pointer;
+    height:200px;
+        padding-top: 0px;
+
+    
+}
+div.enter2:hover{
+    padding-top: 240px;
+    border: 10px solid black;
+    cursor: pointer;
+    
+    
+}
+div.enter3:hover{
+    transform: rotateY(180deg) rotateZ(180deg) rotateX(180deg);
+    border: 10px solid crimson;
+    cursor: pointer;
+    top: 20%;
+    left: 46%;
+    
+}
+div.enter4:hover{
+    transform: rotateY(180deg) rotateZ(180deg) rotateX(180deg);
+    border: 10px solid crimson;
+    cursor: pointer;
+    margin-top: 300px;
+    
+}
+
+
+
+body { background-color: red;
+}
+header{
+    background: url(java.jpg) center ;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    
+}
+h1{
+    text-align: center;
+    color: azure;
+    font-size: 45px;
+    
+}
+
+@media (max-width:800px)
+{
+    a.menu
+    {
+      width: 50%;
+    }
+    iframe
+    {
+        height: 300px;
+    }
+    p
+    {
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .text
+    {
+        line-height: 35px;
+    }
+}

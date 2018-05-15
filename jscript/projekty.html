@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projekty</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=latin-ext" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet"  href="projektystyle.css">
+</head>
+
+<body>    <h1>           
+        Maciej Wojtas
+              
+    </h1>
+    <div id="wrapper">
+    
+        <div class="menu"><a class="menu" href="index.html">Główna</a><a class="menu" href="index.html">o mnie</a><a class="menu" href="">projekty</a><a  class="menu" href="contact.html">kontakt</a></div>
+    <div id="article">
+         
+    <div class="left">
+        <h2>Gra w PingPong</h2>
+        Projekt w html. Prosta gra w napisana w języku java script z uzyciem silnika Canvas. Możesz zmierzyć się ze sztuczną inteligencją komputera w oknie swojej przeglądarki!
+                <button  class="left" ><a href="tenis.html">Otwórz</a></button>
+
+        </div>
+        
+    <div class="right">
+                <h2>Prosta strona internetowa</h2>
+Ogólnie mój pierwszy projekt :)  Tylko css i html. Zwykła klasyczna wizytówka, bez elementów java script. Możesz poczytać nieco o obozie koncentracyjnym Aushwitz oraz zobaczyć ofertę oprowadzania w dwóch językach! 
+        
+        
+        <button class="right"><a href="aushwitz.html">Otwórz</a></button>
+        
+        
+        </div>
+    
+    
+    
+    
+    
+    </div>
+        </div>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script>
+        $(`.left`).on(`click`, function(){
+                        $(`.left`).toggleClass(`active`);
+
+           })
+         $(`.right`).on(`click`, function(){
+            $(`.right`).toggleClass(`active`);
+
+           })
+    
+    </script>
+</body>
+</html>

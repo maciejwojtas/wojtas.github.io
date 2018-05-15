@@ -1,0 +1,169 @@
+*{
+margin: 0;
+padding: 0;
+font-family: 'Playfair Display', serif;
+}
+
+body{
+    background: url(java.jpg) center;
+}
+
+#wrapper{
+    border-radius: 50%;
+    padding-top: 20px;
+    text-align: center;
+     margin: 0 auto;
+    max-width: 1000px;
+    min-height: 500px;
+    background-color: silver;
+}
+
+#article{
+   
+    padding-top: 30px;
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+#contact{
+    width: 1000px;
+    padding: 0px auto;
+    line-height: 40px;
+    font-size: 20px;
+    
+}
+.right{
+    background-color: beige;
+    width: auto;
+        height: 40px;
+    padding: 20px;
+        font-size: 0px;
+    text-align: left;
+    
+}
+div.right:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+div.right{
+           border: 5px solid black;
+
+}
+
+.left{
+    background-color: beige;
+    width: auto;
+    height: 40px;
+    padding: 20px;
+        font-size: 0px;
+    text-align: left;
+   
+    
+}
+div.left:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+div.left{
+           border: 5px solid black;
+
+}
+
+.active{
+    
+    background-color: beige;
+    width: 300px;
+    font-size: 20px;   
+    height: auto;
+  
+}
+button{
+    transform: scale(0);
+    
+}
+button:hover{
+    color: beige;
+    background-color: black;
+    cursor: pointer;
+    border: 0px;
+    
+    
+}
+button.active{
+    transform: scale(0.5);
+    height: 50px;
+    font-size: 30px;
+      transition: 1s;
+ 
+        padding: 0;
+
+    
+    
+}
+h1{
+    text-align: center;
+    color: azure;
+    font-size: 45px;
+    padding-bottom: 20px;
+    
+}
+
+h2{
+    font-size: 30px;
+    padding-bottom: 10px;
+    
+}
+a{
+    
+    text-align: center;
+    display: block;
+    padding: auto 0;
+    text-decoration:none;
+    color: black;
+
+    
+}
+a.menu{
+    font-family: 'Lobster', cursive;
+text-align: center;
+    font-size: 20px;
+    color: azure;
+    display: block;
+    text-decoration: none;
+    
+}
+a:hover{
+       
+    color: beige;
+
+}
+div.menu{
+    position: absolute;
+    box-sizing:border-box;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: azure;
+    background: url(menu.jpg) center;
+    font-family: 'Lobster', cursive;
+    top: 10%;
+    left: 46%;
+    width: 100px;
+    height: 50px;
+    border: 5px solid crimson;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: azure;
+    transition: 2s;
+    padding-top: 20px;
+}
+div.menu:hover{
+        background-color: orangered;
+    background-image: none;
+    border: 10px solid crimson;
+    cursor: pointer;
+    height:200px;
+        padding-top: 0px;
+
+    
+}
