@@ -43,7 +43,7 @@ var commentBase = {
     
     addName: function(){
         var name =this.$inputName.val();
-        
+        name = name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
         if(name==""){
          alert("podaj nazwę")
         return false;
@@ -61,6 +61,7 @@ var commentBase = {
      },  
     addComment: function(){
         var name =this.$input.val();
+        name = name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
         if(name==""){
         alert("podaj treść kometarza")
         return false;}
@@ -82,7 +83,8 @@ var commentBase = {
     
 
     
-} 
+}
+commentBase.init();
 
 
 
